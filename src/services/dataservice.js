@@ -9,5 +9,12 @@ export default {
                 return resp.data
             })
             .catch(()=>{})
+    },
+    getFilmBySeason(saesonNumber){
+        return Axios.get(`/episodes?season=${saesonNumber}`)
+        .then(resp => {
+            return resp.data
+        })
+        .catch(()=>{})
     }
 }
